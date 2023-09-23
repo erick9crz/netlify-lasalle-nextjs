@@ -1,0 +1,87 @@
+.o-btn {
+	background: transparent;
+	border-radius: 6px;
+	border: 1px solid var(--gris-2);
+	box-sizing: border-box;
+	color: var(--gris-2);
+	cursor: pointer;
+	display: inline-block;
+	font: 18px/1.5 var(--font-indiBold);
+	font-weight: 500;
+	overflow: hidden;
+	padding: 6px 30px;
+	position: relative;
+	transition: 1s all ease;
+	z-index: 1;
+
+	&:after,
+	&:before {
+		background: rgba(map-get($colores, rojo), .8);
+		content: '';
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		transition: .3s all ease;
+		width: 0;
+		z-index: -1;
+	}
+
+	&:before {
+		transition-delay: .3s;
+	}
+
+	&:hover {
+		color: var(--blanco);
+		border-color: var(--rojo);
+
+		&:after,
+		&:before {
+			width: 100%;
+		}
+	}
+
+	&--whiteBlue {
+		border: 1px solid var(--blanco);
+		color: var(--blanco);
+		
+		&:after,
+		&:before {
+			background: rgba(map-get($colores, blanco), .8);
+		}
+
+		&:hover {
+			color: var(--marino);
+		}
+	}
+
+	&--red {
+		border: 1px solid var(--rojo);
+		color: var(--blanco);
+		background: var(--rojo);
+		
+		&:after,
+		&:before {
+			background: rgba(map-get($colores, blanco), .8);
+		}
+
+		&:hover {
+			color: var(--rojo);
+		}
+	}
+
+	&--whiteRed {
+		border: 1px solid var(--blanco);
+		color: var(--blanco);
+
+		&:after,
+		&:before {
+			background: rgba(map-get($colores, blanco), .8);
+		}
+
+		&:hover {
+			color: var(--rojo);
+		}
+	}
+}

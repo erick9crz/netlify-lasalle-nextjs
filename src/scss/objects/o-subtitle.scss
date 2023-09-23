@@ -1,0 +1,37 @@
+.o-subtitle {
+	color: var(--marino);
+	font: 40px/46px var(--font-indiBoldItalic);
+	margin: 0 0 40px;
+	position: relative;
+
+	@include responsive(mobile) {
+		font-size: 60px;
+		line-height: 60px;
+		margin: 0 0 60px;
+	}
+
+	&:after {
+		background: var(--rojo);
+		bottom: -10px;
+		content: '';
+		display: block;
+		height: 2px;
+		left: 0;
+		position: absolute;
+		width: 80px;
+	}
+
+	&.m-light {
+		font-size: 40px;
+
+		&:after {
+			bottom: 0;
+		}
+	}
+
+	&.m-center {
+		display: inline-block;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}

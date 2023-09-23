@@ -1,18 +1,22 @@
 {
-  "name": "la-salle-micrositios",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "eslint": "8.46.0",
-    "eslint-config-next": "13.4.13",
-    "next": "13.4.13",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  }
+	"name": "la-salle-micrositios",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@splidejs/react-splide": "^0.7.12",
+		"eslint": "8.46.0",
+		"eslint-config-next": "13.4.13",
+		"next": "^13.4.19",
+		"normalize.css": "^8.0.1",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"sass": "^1.65.1",
+		"webpack": "^5.88.2"
+	}
 }

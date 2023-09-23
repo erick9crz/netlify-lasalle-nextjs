@@ -1,0 +1,15 @@
+@mixin responsive($breakpoint) {
+	@each $name, $query in $responsive {
+		@if $breakpoint == $name {
+			@media only screen and (min-width: $query) {
+				@content
+			}
+		};
+
+		@if $breakpoint == #{$name}-max {
+			@media only screen and (max-width: ($query - 1px)) {
+				@content
+			}
+		}
+	}
+}

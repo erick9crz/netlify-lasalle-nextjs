@@ -1,0 +1,137 @@
+.c-numeralia {
+	padding: 60px 0 120px;
+
+	h2 {			
+		@include responsive(mobile) {
+			width: 50%;
+		}
+	}
+
+	.o-container {
+		position: relative;
+	}
+
+	&__slider {
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+		width: 90%;
+		z-index: 1;
+
+		&-item {
+			&:last-child {
+				.c-numeralia__card {
+					p {
+						border-inline-end: 0;
+					}
+				}
+			}
+		}
+
+		&-arrow {
+			background: none;
+			border: none;
+			display: block;
+			font-size: 0;
+			height: 40px;
+			outline: none;
+			position: absolute;
+			top: 50%;
+			width: 40px;
+			z-index: 2;
+
+			&:before {
+				color: var(--rojo);
+				// content: '';
+				display: block;
+				font-family: 'lasalle';
+				font-size: 24px;
+			}
+
+			&.icon {
+				font-family: 'lasalle'; 
+			}
+
+			svg {
+				display: none;
+			}
+
+			&-prev {
+				left: 0;
+
+				// &:before {
+				// 	content: '\e942';
+				// }
+			}
+
+			&-next {
+				right: 0;
+
+				&:before {
+					content: '\e929';
+				}
+			}
+		}
+	}
+
+	&__card {
+		background: var(--rojo-2);
+		margin-block-start: 94px;
+		padding: 50px 0 30px;
+		position: relative;
+		text-align: center;
+
+		> strong {
+			color: var(--marino);
+			display: block;
+			font-family: var(--font-indiBoldItalic);
+			font-size: 40px;
+			margin: 20px 0;
+		}
+
+		p {
+			color: var(--marino);
+			font-size: 16px;
+			line-height: 21px;
+			padding: 10px 16px 10px;
+
+			@include responsive(mobile) {
+				border-inline-end: 1px dashed var(--marino);
+			}
+		}
+
+		&-icon {
+			background: var(--rojo);
+			border-radius: 50%;
+			color: var(--blanco);
+			height: 94px;
+			left: 50%;
+			line-height: 94px;
+			margin: 0 auto;
+			position: absolute;
+			text-align: center;
+			top: -47px;
+			transform: translateX(-50%);
+			width: 94px;
+
+			i {
+				font-size: 60px;
+				left: 0;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 100%;
+			}
+		}
+	}
+
+	&__bg {
+		background: var(--marino);
+		display: block;
+		height: 200px;
+		margin-block-start: -160px;
+		position: relative;
+		width: 100%;
+		z-index: -1;
+	}
+}

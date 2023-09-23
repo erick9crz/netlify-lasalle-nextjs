@@ -1,0 +1,171 @@
+.c-events {
+	padding-block: 60px;
+
+	&__list {
+		margin-block-end: 40px;
+		overflow: hidden;
+
+		@include responsive(mobile) {
+			align-items: center;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0 3%;
+		}
+
+		> li {
+			@include responsive(mobile){
+				width: calc((100% / 3) - 2%);
+			}
+		}
+	}
+
+	&__card {
+		padding-block-start: 42px;
+		position: relative;
+
+		&-date {
+			background: var(--rojo);
+			border-radius: 50%;
+			color: var(--blanco);
+			height: 85px;
+			left: 0;
+			padding-block-start: 18px;
+			position: absolute;
+			text-align: center;
+			top: 0;
+			width: 85px;
+
+			strong {
+				display: block;
+				font: $bold 46px/36px var(--font-indiBoldItalic);
+			}
+
+			small {
+				font-size: 13px;
+				font-family: var(--font-indiBold);
+				margin: 0;
+			}
+		}
+
+		&-info {
+			background: var(--rojo-2);
+			padding: 60px 30px 5px;
+
+			@include responsive(mobile){
+				min-height: 270px;
+			}
+		}
+
+		&-title {
+			position: relative;
+			
+			h3 {
+				font-size: 18px;
+				line-height: 24px;
+				margin: 0 0 25px;
+				min-height: 45px;
+				position: relative;
+				width: 90%;
+
+				@include responsive(mobile){
+					margin: 0 0 45px;
+				}
+
+				&:after {
+					background: var(--rojo);
+					content: '';
+					display: block;
+					height: 2px;
+					left: 0;
+					position: absolute;
+					top: 100%;
+					width: 50px;
+				}
+
+				a {
+					font-size: 18px;
+					line-height: 24px;
+				}
+			}
+		}
+
+		&-btn {
+			bottom: 0;
+			color: var(--rojo);
+			display: block;
+			font-size: 28px;
+			position: absolute;
+			right: 0;
+			transform: rotate(135deg);
+			transition: .6s all ease;
+
+			@include responsive(mobile){
+				display: none;
+			}
+
+			&.is-open {
+				transform: rotate(0);
+				right: -3px;
+				bottom: -2px;
+			}
+		}
+
+		&-resume {
+			height: 0;
+			overflow: hidden;
+			transition: 0.6s all ease;
+
+			@include responsive(mobile){
+				height: auto;
+				overflow: unset;
+			}
+
+			p {
+				color: var(--marino);
+				font-size: 16px;
+				line-height: 1.15;
+				margin: 5px 0;
+
+				&:last-child {
+					margin: 0;
+				}
+				
+				a {
+					font-family: var(--font-indiRegular);
+
+					&:after {
+						background: var(--rojo);
+						content: '';
+						display: block;
+						height: 2px;
+						left: 0;
+						position: absolute;
+						top: 100%;
+						transition: .6s all ease;
+						width: 0;
+					}
+
+					&:hover {
+						&:after {
+							width: 60%;
+						}
+					}
+				}
+			}	
+		}
+
+		&-link {
+			color: var(--rojo);
+			display: block;
+			font-size: 22px;
+			margin: 0 0 0 auto;
+			text-align: right;
+			transition: .6s all ease;
+			width: 40px;
+
+			&:hover {
+				transform: translateX(10px);
+			}
+		}
+	}
+}

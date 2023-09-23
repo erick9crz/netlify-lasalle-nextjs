@@ -1,0 +1,6 @@
+// recorro mi objeto de colores con un each
+:root {
+	@each $nombre, $codigoColor in $colores {
+		--#{$nombre} : #{$codigoColor};
+	}
+}

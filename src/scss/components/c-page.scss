@@ -1,0 +1,10 @@
+.c-page {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	&.m-mainWrapHide {
+		opacity: 0;
+		transform: scale3d(0.8,0.8,1);
+	}
+}

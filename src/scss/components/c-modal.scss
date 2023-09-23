@@ -1,0 +1,59 @@
+.c-modal {
+	&--blue {
+		align-items: center;
+		background: rgba(map-get($colores, marino-2), .8);
+		display: none;
+		height: 100%;
+		left: 0;
+		justify-content: center;
+		opacity: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 9;
+
+		.o-container {
+			padding-block-start: 40px;
+			position: relative;
+		}
+	}
+
+	&__close {
+		color: var(--blanco);
+		font-size: 32px;
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		&:hover {
+			color: var(--rojo);
+		}
+	}
+
+	&__pdf,
+	&__video {
+		border: 1px solid white;
+		height: auto;
+		font-size: 0;
+		max-height: 600px;
+		overflow: auto;
+	}
+
+	&__video {
+		height: 400px;
+		margin: 0 auto;
+		width: 95%;
+	}
+
+	iframe,
+	object {
+		border: none;
+		height: 100%;
+		width: 100%;
+	}
+
+	canvas {
+		margin: 0 auto;
+		width: 100%;
+	}
+}
